@@ -1,0 +1,16 @@
+<section class="skills py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">My Skills</h2>
+    
+    @for (skill of skills; track skill.name) {
+      <div class="mb-3">
+        <h5>{{ skill.name }}</h5>
+        <div class="progress">
+          <div class="progress-bar bg-{{ skill.color }}" [style.width.%]="skill.level">
+            {{ skill.level }}%
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</section>
